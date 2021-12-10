@@ -1,0 +1,18 @@
+.taula_centrada{
+  display: flex;
+  justify-content: center;
+}
+.taula_centrada table{
+  width: 80%;
+  border-collapse: collapse;
+}
+.taula_centrada tr{
+}
+ .taula_centradath, td{
+  border: solid 2px #737373;
+  padding: 10px 15px;
+  text-align: center;
+}
+.taula_centrada th{
+  border: solid 2px #000000;
+}
