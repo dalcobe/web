@@ -5,7 +5,7 @@
 <html lang="ca" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Filtrar Productes (Plaques Base)</title>
+    <title>Filtrar Productes (Ordenat per Marca)</title>
     <link rel="stylesheet" href="../css/generics.css">
     <link rel="stylesheet" href="../css/nav.css">
     <link rel="stylesheet" href="../css/main.css">
@@ -45,9 +45,12 @@
             <th>
               Categoria
             </th>
+            <th>
+              Material
+            </th>
           </tr>
           <?php
-          $sql="SELECT * from productes,categoria where productes.codi_cat=categoria.codi_cat and categoria.codi_cat like 1";
+          $sql="SELECT * from productes,categoria,fet where productes.codi_cat=categoria.codi_cat and productes.codi_prod=fet.codi_prod  order by marca";
           $result=mysqli_query($connexio,$sql);
           while ($mostrar=mysqli_fetch_array($result)) {
             ?>
@@ -57,14 +60,13 @@
               <td><?php echo $mostrar['model']; ?></td>
               <td><?php echo $mostrar['estoc']; ?></td>
               <td><?php echo $mostrar['nom']; ?></td>
+              <td><?php echo $mostrar['nom2']; ?></td>
             </tr>
           <?php
           }
           ?>
-
         </table>
       </div>
-
     </main>
   </body>
 </html>

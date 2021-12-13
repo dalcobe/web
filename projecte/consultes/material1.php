@@ -5,7 +5,7 @@
 <html lang="ca" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Filtrar Productes (Plaques Base)</title>
+    <title>Filtrar Productes (Material Ferro)</title>
     <link rel="stylesheet" href="../css/generics.css">
     <link rel="stylesheet" href="../css/nav.css">
     <link rel="stylesheet" href="../css/main.css">
@@ -43,11 +43,11 @@
               Estoc
             </th>
             <th>
-              Categoria
+              Material
             </th>
           </tr>
           <?php
-          $sql="SELECT * from productes,categoria where productes.codi_cat=categoria.codi_cat and categoria.codi_cat like 1";
+          $sql="SELECT * from productes,fet where productes.codi_prod=fet.codi_prod and fet.codi_mat like 1";
           $result=mysqli_query($connexio,$sql);
           while ($mostrar=mysqli_fetch_array($result)) {
             ?>
@@ -61,8 +61,8 @@
           <?php
           }
           ?>
-
         </table>
+      </div>
       </div>
 
     </main>

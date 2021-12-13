@@ -5,7 +5,7 @@
 <html lang="ca" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Filtrar Productes</title>
+    <title>Filtrar Productes (Processador)</title>
     <link rel="stylesheet" href="../css/generics.css">
     <link rel="stylesheet" href="../css/nav.css">
     <link rel="stylesheet" href="../css/main.css">
